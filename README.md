@@ -21,6 +21,7 @@ python -m venv venv
 11. for deactivate type in CMD
 ```cmd
 .\deactivate.bat
+```
 12. after activate your venv install 'requests' library:
 ```python
 pip install requests
