@@ -15,4 +15,6 @@ python -m venv venv
 ```
 9. locate to ...\venv\Scripts
 10. in CMD:
-
+```cmd
+activate.bat
+```
