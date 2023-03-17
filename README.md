@@ -7,4 +7,4 @@ For using this script, you will need following requirements:
 3. enter your information in user_id.json
 4. copy result (.json file) from [Morteza Bashsiz](https://github.com/MortezaBashsiz/CFScanner) script/ app
 ```python
-print("Hello World!")
+pyhton -m venv venv
