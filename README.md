@@ -8,11 +8,11 @@ For using this script, you will need following requirements:
 4. enter your information in user_id.json
 5. copy result (.json file) from [Morteza Bashsiz](https://github.com/MortezaBashsiz/CFScanner) script/ app and paste in your folder
 6. rename it to scan.json
-open CMD (for windows users) locate your folder
-7. follow the commands:
+7. open CMD (for windows users) locate your folder
+8. follow the commands:
 ```python
 print("Hello, World!")
 ``` ```
-8. locate to ...\venv\Scripts
-9. in CMD:
+9. locate to ...\venv\Scripts
+10. in CMD:
 
