@@ -30,6 +30,11 @@ pip install requests
 ```python
 python create_ip.py
 ```
-run create_ip.py
-
-run create_ip.py
+:running_man: run list_ip.py
+```python
+python create_ip.py
+```
+:running_man: run delete_ip.py
+```python
+python create_ip.py
+```
