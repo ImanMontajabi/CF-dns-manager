@@ -1,5 +1,5 @@
 # CF_dns_manager
-:kissing cat: create delete list DNS records in Cloudflare
+:smile: create delete list DNS records in Cloudflare
 ========================
 For using this script, you will need following requirements:
 1. [install python](https://www.python.org/downloads/) >= 3.9
