@@ -10,9 +10,11 @@ For using this script, you will need following requirements:
 6. rename it to scan.json
 7. open CMD (for windows users) locate your folder
 8. follow the commands:
-```python
-print("Hello, World!")
-``` ```
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 9. locate to ...\venv\Scripts
 10. in CMD:
 
