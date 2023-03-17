@@ -27,6 +27,7 @@ python -m venv venv
 pip install requests
 ```
 13. locate to your project folder in CMD 
+
 :running_man: run create_ip.py:
 ```python
 python create_ip.py
