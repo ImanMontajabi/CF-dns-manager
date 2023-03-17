@@ -34,9 +34,9 @@ python create_ip.py
 ```
 :running_man: run list_ip.py
 ```python
-python create_ip.py
+python list_ip.py
 ```
 :running_man: run delete_ip.py
 ```python
-python create_ip.py
+python delete_ip.py
 ```
