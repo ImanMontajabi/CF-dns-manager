@@ -10,8 +10,8 @@ For using this script, you will need following requirements:
 6. rename it to scan.json
 open CMD (for windows users) locate your folder
 7. follow the commands:
-```print
-(“Hello, World!”)```
+```python
+print(“Hello, World!”)```
 8. locate to ...\venv\Scripts
 9. in CMD:
 
