@@ -14,11 +14,14 @@ For using this script, you will need following requirements:
 python -m venv venv
 ```
 9. locate to ...\venv\Scripts
-10. in CMD:
+10. for activate type in CMD:
 ```cmd
 .\activate.bat
 ```
-after activate your venv install 'requests' library:
+11. for deactivate type in CMD
+```cmd
+.\deactivate.bat
+12. after activate your venv install 'requests' library:
 ```python
 pip install requests
 ```
