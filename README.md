@@ -11,7 +11,7 @@ For using this script, you will need following requirements:
 open CMD (for windows users) locate your folder
 7. follow the commands:
 ```python
-print(“Hello, World!”)```
+print(“Hello, World!”)``` ```
 
 8. locate to ...\venv\Scripts
 9. in CMD:
