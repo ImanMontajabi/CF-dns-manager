@@ -22,7 +22,10 @@ after activate your venv install 'requests' library:
 ```python
 pip install requests
 ```
-run create_ip.py:
+:running_man: run create_ip.py:
 ```python
 python create_ip.py
 ```
+run create_ip.py
+
+run create_ip.py
