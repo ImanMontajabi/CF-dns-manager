@@ -20,3 +20,5 @@ python -m venv venv
 ```
 after activate your venv install 'requests' library:
 ```python
+pip install requests
+```
