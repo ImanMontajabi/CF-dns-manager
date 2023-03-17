@@ -11,9 +11,7 @@ For using this script, you will need following requirements:
 7. open CMD (for windows users) locate your folder
 8. follow the commands:
 ```python
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+python -m venv venv
 ```
 9. locate to ...\venv\Scripts
 10. in CMD:
