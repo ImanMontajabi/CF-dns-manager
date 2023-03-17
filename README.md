@@ -14,5 +14,4 @@ open CMD (for windows users) locate your folder
 pyhton -m venv venv
 8. locate to ...\venv\Scripts
 9. in CMD:
-```python
-  activate.bat
+
