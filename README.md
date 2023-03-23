@@ -1,8 +1,16 @@
 # CF_dns_manager
 ![icons8-orange-48](https://user-images.githubusercontent.com/52942515/227340008-faeeb65b-507e-40cf-b3a7-fd740ee38cb9.png) create delete list DNS records in Cloudflare
 ========================
+## Dependencies
+
+- [python](https://www.python.org/downloads/) (>=3.6)
+- Libraries
+  - requests
+
+========================
+
 For using this script, you will need following requirements:
-1. [install python](https://www.python.org/downloads/) >= 3.9 :bangbang: add python to your PATH :bangbang:
+1. [install python](https://www.python.org/downloads/) (>=3.6) :bangbang: add python to your PATH :bangbang:
 2. create a new folder for project
 3. clone this script [link](https://github.com/ImanMontajabi/CF_dns_manager.git) or [download](https://github.com/ImanMontajabi/CF_dns_manager/archive/refs/heads/main.zip) in your folder
 4. enter your information in user_id.json
