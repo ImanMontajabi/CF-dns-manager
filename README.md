@@ -18,6 +18,9 @@ git clone https://github.com/ImanMontajabi/CF_dns_manager.git
 5. Obtain a scan.json file from Morteza Bashsiz script/ app that contains your Cloudflare DNS scan data. Save it to your project folder.
 6. Open a command prompt or terminal window and navigate to your project folder.
 7. Create a Python virtual environment by running:
+```python
+python -m venv venv
+```
 
 
 
