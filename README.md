@@ -1,5 +1,5 @@
-# CF_dns_manager
-![icons8-orange-48](https://user-images.githubusercontent.com/52942515/227340008-faeeb65b-507e-40cf-b3a7-fd740ee38cb9.png) create delete list DNS records in Cloudflare
+# Cloudflare DNS Record Manager
+![icons8-orange-48](https://user-images.githubusercontent.com/52942515/227340008-faeeb65b-507e-40cf-b3a7-fd740ee38cb9.png) create delete This Python script allows you to create, list, and delete DNS records in Cloudflare. It is designed to work with Python 3.6 or higher and requires the requests library.
 ========================
 ## Dependencies
 
