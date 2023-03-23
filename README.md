@@ -1,5 +1,5 @@
 # CF_dns_manager
-:orange: create delete list DNS records in Cloudflare
+![icons8-orange-48](https://user-images.githubusercontent.com/52942515/227340008-faeeb65b-507e-40cf-b3a7-fd740ee38cb9.png) create delete list DNS records in Cloudflare
 ========================
 For using this script, you will need following requirements:
 1. [install python](https://www.python.org/downloads/) >= 3.9 :bangbang: add python to your PATH :bangbang:
@@ -24,6 +24,7 @@ python -m venv venv
 ```
 12. after activate your venv install 'requests' library:
 ```python
+
 pip install requests
 ```
 13. locate to your project folder in CMD 
