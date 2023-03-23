@@ -51,7 +51,9 @@ python delete_ip.py
 You will be prompted to enter the domain and record ID of the record you wish to delete.
 # License
 This project is licensed under the [MIT license](https://github.com/ImanMontajabi/CF_dns_manager/blob/main/LICENSE).
-
+Please make sure to thoroughly read the license before using and/or modifying this script
+# Troubleshooting and Support
+If you run into any issues or have questions about this script, please see the [discussions](https://github.com/ImanMontajabi/CF_dns_manager/discussions)[open an issue](https://github.com/ImanMontajabi/CF_dns_manager/issues) in this repository.
 
 
 
