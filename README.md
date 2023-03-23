@@ -21,8 +21,10 @@ git clone https://github.com/ImanMontajabi/CF_dns_manager.git
 ```python
 python -m venv venv
 ```
-
-
+8. Activate the virtual environment by running:
+```python
+.\venv\Scripts\activate
+```
 
 
 
