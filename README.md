@@ -21,7 +21,7 @@ git clone https://github.com/ImanMontajabi/CF_dns_manager.git
 ```
 python -m venv venv
 ```
-8. Activate the virtual environment by running(with CMD in Windows):
+8. Activate the virtual environment by running (with CMD in Windows):
 ```
 .\venv\Scripts\activate.bat
 ```
