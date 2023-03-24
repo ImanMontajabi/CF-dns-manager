@@ -18,34 +18,34 @@ git clone https://github.com/ImanMontajabi/CF_dns_manager.git
 5. Obtain a scan.json file from Morteza Bashsiz script/ app that contains your Cloudflare DNS scan data. Save it to your project folder.
 6. Open a command prompt or terminal window and navigate to your project folder.
 7. Create a Python virtual environment by running:
-```python
+```
 python -m venv venv
 ```
 8. Activate the virtual environment by running:
-```python
+```
 .\venv\Scripts\activate
 ```
 9. Install the `requests` library by running:
-```python
+```
 pip install requests
 ```
 # Usage
 **Creating a DNS Record**
 
 To create a new DNS record, run the `create_ip.py` script:
-```python
+```
 python create_ip.py
 ```
 You will be prompted to enter the IP address, domain name, and record type
 # Listing DNS Records
 To see a list of your DNS records, run the `list_ip.py` script:
-```python
+```
 python list_ip.py
 ```
 This will display a table of all of your current DNS records in Cloudflare.
 # Deleting a DNS Record
 To delete a DNS record, run the `delete_ip`.py script:
-```python
+```
 python delete_ip.py
 ```
 You will be prompted to enter the domain and record ID of the record you wish to delete.
