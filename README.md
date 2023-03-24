@@ -15,15 +15,15 @@ This Python script allows you to create, list, and delete DNS records in Cloudfl
 git clone https://github.com/ImanMontajabi/CF_dns_manager.git
 ```
 4. Edit the user_id.json file with your Cloudflare account-related information.
-5. Obtain a scan.json file from Morteza Bashsiz script/ app that contains your Cloudflare DNS scan data. Save it to your project folder.
+5. Obtain a **.json** file from [Morteza Bashsiz script/ app](https://github.com/MortezaBashsiz/CFScanner) that there is in result folder that contains your Cloudflare DNS scan data. Save it to your project folder and name it **scan** finally it is **scan.json**.
 6. Open a command prompt or terminal window and navigate to your project folder.
 7. Create a Python virtual environment by running:
 ```
 python -m venv venv
 ```
-8. Activate the virtual environment by running:
+8. Activate the virtual environment by running(with CMD in Windows):
 ```
-.\venv\Scripts\activate
+.\venv\Scripts\activate.bat
 ```
 9. Install the `requests` library by running:
 ```
@@ -36,7 +36,7 @@ To create a new DNS record, run the `create_ip.py` script:
 ```
 python create_ip.py
 ```
-You will be prompted to enter the IP address, domain name, and record type
+You will be prompted to enter the IP address and enter domain name
 # Listing DNS Records
 To see a list of your DNS records, run the `list_ip.py` script:
 ```
@@ -48,7 +48,7 @@ To delete a DNS record, run the `delete_ip`.py script:
 ```
 python delete_ip.py
 ```
-You will be prompted to enter the domain and record ID of the record you wish to delete.
+You will be prompted to enter the domain of the record you wish to delete.
 # License
 This project is licensed under the [MIT license](https://github.com/ImanMontajabi/CF_dns_manager/blob/main/LICENSE).
 Please make sure to thoroughly read the license before using and/or modifying this script
