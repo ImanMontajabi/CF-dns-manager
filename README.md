@@ -57,6 +57,3 @@ If you run into any issues or have questions about this script, please see the [
 
 Additionally, feel free to contribute to the project by submitting a pull request or offering suggestions for improvement.
 
-
-
-
