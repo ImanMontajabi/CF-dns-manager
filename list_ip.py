@@ -31,3 +31,4 @@ for i in range(len(data)):
         i_num += 1
         print(f"{c}({i_num}): {content} \t id: {id}")
 print(f"Total IPs: {i_num}")
+print("github: https://github.com/ImanMontajabi/CF_dns_manager/blob/main/requirements.txt")
