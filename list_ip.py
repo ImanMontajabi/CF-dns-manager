@@ -32,4 +32,4 @@ for i in range(len(data)):
         print(f"{i_num}) {c}(): {content}")
 print(f"Total IPs: {i_num}")
 print("github: https://github.com/ImanMontajabi/CF_dns_manager\n")
-print("github: https://twitter.com/ImanMontajabi/\n")
+print("github: https://twitter.com/ImanMontajabi")
