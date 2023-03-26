@@ -49,7 +49,7 @@ except:
     with open("./CF_dns_manager/user_id.json", "w") as json_file:
         json.dump(user_data, json_file)
                                                                 # reread data!
-    with open("user_id.json", "r") as json_file:
+    with open("./CF_dns_manager/user_id.json", "r") as json_file:
         user_data = json.load(json_file)
 
 params_name = f'{user_data["dns_record_name"]}.{user_data["domain"]}'
