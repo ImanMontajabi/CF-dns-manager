@@ -3,7 +3,6 @@ import json
 
 
 try:
-    print("=====================================")
     with open("user_id.json", "r") as json_file:
         user_data = json.load(json_file)
 
@@ -12,6 +11,7 @@ try:
     zone_id = user_data["zone_id"]
     domain = user_data["domain"]
     dns_record_name = user_data["dns_record_name"]
+    print("=====================================")
 except:
     print("=====================================")
     user_data = {
