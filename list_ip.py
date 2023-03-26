@@ -3,7 +3,7 @@ import json
 
 
 try:
-    with open("user_id.json", "r") as json_file:
+    with open("./CF_dns_manager/user_id.json", "r") as json_file:
         user_data = json.load(json_file)
 
     email = user_data["email"]
