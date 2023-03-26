@@ -60,6 +60,7 @@ with open('./CF_dns_manager/user_id.json', 'r') as json_file:
 email = user_data['email']
 api_token = user_data['api_token']
 zone_id = user_data['zone_id']
+domain = user_data['domain']
 ip_name = user_data["dns_record_name"]
 params_name = f'{user_data["dns_record_name"]}.{user_data["domain"]}'
 url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
@@ -68,14 +69,24 @@ headers = {
         "X-Auth-Email": email,
         "X-Auth-Key": api_token
     }
+i_num = 0
+print("=====================================")
 for i in range(100):
     data = {
         "type": "A",
         "name": params_name,
-        "content": f"{ilist[i]}",
+        "content": f"{ilist[i].strip()}",
         "ttl": 1,
         "proxied": False
     }
-
+    i_num += 1
     response = requests.post(url, headers=headers, json=data)
-    print(response.text)
+    if (response.status_code == 200):
+        print(f"{i_num}){response.json()['result']['name']}: {response.json()['result']['content']} added")
+    else:
+        print(f"{i_num}){ip_name}.{domain}: {ilist[i].strip()} already exist")
+print(f"Total IPs: {i_num}")
+print("=====================================")
+print("github: https://github.com/ImanMontajabi/CF_dns_manager")
+print("twitter: https://twitter.com/imanmontajabi")
+print("=====================================")
