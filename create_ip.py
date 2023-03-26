@@ -1,27 +1,50 @@
 import requests
 import json
 
+
+try:
+    with open("./CF_dns_manager/user_id.json", "r") as json_file:
+        data = json.load(json_file)
+    json_file.close()
+except:
+    print("=====================================")
+    user_data = {
+    "email": input("Enter your email (example@gmail.com):"),
+    "api_token": input("Enter your api_token (xxxxxxxxxxxx):"),
+    "zone_id": input("Enter zone_id (xxxxxxxxxxxx):"),
+    "domain": input("Enter your Domain (example.com):"),
+    "dns_record_name": input("Enter DNS record name:")
+}
+    with open("./CF_dns_manager/user_id.json", "w") as json_file:
+        json.dump(user_data, json_file)
+    json_file.close()
+                                                                         # reread data!
+    with open("./CF_dns_manager/user_id.json", "r") as json_file:
+        user_data = json.load(json_file)
+    json_file.close()
+
 # ============= change scan.json from morteza bashsiz's app to ip.txt =================
 def scan_to_iplist():
-    f = open('scan.json')
+    f = open('./CF_dns_manager/scan.json')
     data = json.load(f)
     ip_list = [i['ip'] for i in data['workingIPs']]
     f.close()
     return ip_list
+
 def iplist_to_iptext():
     iplist = scan_to_iplist()
-    with open('ip.txt', 'w') as f:
+    with open('./CF_dns_manager/ip.txt', 'w') as f:
             f.write('\n'.join(iplist))
 iplist_to_iptext()
 # ================= Read ip.txt =======================
 def ip_list():
-    with open ('ip.txt', 'r') as f:
+    with open ('./CF_dns_manager/ip.txt', 'r') as f:
         myip = [line.strip() for line in f]
         f.close()
         return myip
 # ================= put best 100 ip to bestip.txt =====================
 def bestip():
-    filename = "best_ip.txt"
+    filename = "./CF_dns_manager/best_ip.txt"
     top100ip = []
     for i in range(100):
         top100ip.append(ip_list()[i])
@@ -30,15 +53,15 @@ def bestip():
     f.close()
 bestip()
 # ============ create dns records ===============
-with open("best_ip.txt", "r") as ip:
+with open("./CF_dns_manager/best_ip.txt", "r") as ip:
     ilist = ip.readlines()
-with open('user_id.json', 'r') as json_file:
+with open('./CF_dns_manager/user_id.json', 'r') as json_file:
     user_data = json.load(json_file)
 email = user_data['email']
 api_token = user_data['api_token']
 zone_id = user_data['zone_id']
-ip_name = user_data["ip_dns_record"]
-params_name = f'{user_data["ip_dns_record"]}.{user_data["domain"]}'
+ip_name = user_data["dns_record_name"]
+params_name = f'{user_data["dns_record_name"]}.{user_data["domain"]}'
 url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
 headers = {
         "Content-Type": "application/json",

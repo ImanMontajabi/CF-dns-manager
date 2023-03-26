@@ -22,7 +22,7 @@ except:
         "domain": input("Enter your Domain (example.com):"),
         "dns_record_name": input("Enter DNS record name:")
     }
-    with open("user_id.json", "w") as json_file:
+    with open("./CF_dns_manager/user_id.json", "w") as json_file:
         json.dump(user_data, json_file)
     json_file.close()
                                                                 # reread data!
