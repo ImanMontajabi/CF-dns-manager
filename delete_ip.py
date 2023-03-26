@@ -77,4 +77,8 @@ for ip in iplist:
             response = requests.delete(url_del, headers=headers)
             print(f"{i_num}){dns_record_name}.{domain}: {dns_record['content']}\t deleted")
 print(f"Total delted IPs: {i_num}")
+print("=====================================")
+print("github: https://github.com/ImanMontajabi/CF_dns_manager")
+print("twitter: https://twitter.com/imanmontajabi")
+print("=====================================")
             
