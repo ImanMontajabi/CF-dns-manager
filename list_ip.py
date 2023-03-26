@@ -12,6 +12,7 @@ try:
     domain = user_data["domain"]
     dns_record_name = user_data["dns_record_name"]
     print("=====================================")
+    json_file.close()
 except:
     print("=====================================")
     user_data = {
@@ -23,6 +24,7 @@ except:
     }
     with open("user_id.json", "w") as json_file:
         json.dump(user_data, json_file)
+    json_file.close()
                                                                 # reread data!
     with open("user_id.json", "r") as json_file:
         user_data = json.load(json_file)
