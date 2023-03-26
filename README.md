@@ -30,8 +30,8 @@ python -m venv venv
 pip install requests
 ```
 # Usage
-**Creating a DNS Record**
-
+# Creating a DNS Record
+=====================
 To create new DNS records, run the `create_ip.py` script:
 ```
 python create_ip.py
