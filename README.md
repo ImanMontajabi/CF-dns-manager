@@ -30,24 +30,22 @@ python -m venv venv
 pip install requests
 ```
 # Usage
-# Creating a DNS Record
-To create new DNS records, run the `create_ip.py` script:
-```
-python create_ip.py
-```
-You will be prompted to enter the IP address and enter domain name
-# Listing DNS Records
+# Listing a DNS Record
 To see a list of your DNS records, run the `list_ip.py` script:
 ```
 python list_ip.py
 ```
 This will display a table of all of your current DNS records in Cloudflare.
+# Creating DNS Records
+To create your DNS records, run the `create_ip.py` script:
+```
+python create_ip.py
+```
 # Deleting DNS Records
 To delete DNS record, run the `delete_ip`.py script:
 ```
 python delete_ip.py
 ```
-You will be prompted to enter the subdomain of the record you wish to delete.
 # License
 This project is licensed under the [MIT license](https://github.com/ImanMontajabi/CF_dns_manager/blob/main/LICENSE).
 Please make sure to thoroughly read the license before using and/or modifying this script
