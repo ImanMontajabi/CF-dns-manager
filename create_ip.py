@@ -84,7 +84,7 @@ for i in range(100):
     if (response.status_code == 200):
         print(f"{i_num}){response.json()['result']['name']}: {response.json()['result']['content']} added")
     else:
-        print(f"{i_num}){ip_name}.{domain}: {ilist[i].strip()} already exist")
+        print(f"{i_num}){ip_name}.{domain}: {ilist[i].strip()}  already exist")
 print(f"Total IPs: {i_num}")
 print("=====================================")
 print("github: https://github.com/ImanMontajabi/CF_dns_manager")

@@ -42,7 +42,6 @@ headers = {
     'X-Auth-Key': api_token,
     'Content-Type': 'application/json'
 }
-
 dns_records = []
 page_num = 1
 while True:  # loop over all pages
