@@ -35,7 +35,6 @@ To create new DNS records, run the `create_ip.py` script:
 ```
 python create_ip.py
 ```
-You will be prompted to enter the IP address and enter domain name
 # Listing DNS Records
 To see a list of your DNS records, run the `list_ip.py` script:
 ```
@@ -47,7 +46,6 @@ To delete DNS record, run the `delete_ip`.py script:
 ```
 python delete_ip.py
 ```
-You will be prompted to enter the subdomain of the record you wish to delete.
 # License
 This project is licensed under the [MIT license](https://github.com/ImanMontajabi/CF_dns_manager/blob/main/LICENSE).
 Please make sure to thoroughly read the license before using and/or modifying this script
