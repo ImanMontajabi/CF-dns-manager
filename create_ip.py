@@ -1,6 +1,6 @@
 import requests
 import json
-
+import re
 
 try:
     with open("./CF_dns_manager/user_id.json", "r") as json_file:
@@ -30,9 +30,25 @@ def scan_to_iplist():
     ip_list = [i['ip'] for i in data['workingIPs']]
     f.close()
     return ip_list
+def linux_scan_to_iplist():
+    with open('./CF_dns_manager/scan.cf', 'r') as f:
+        data = f.readlines()
+    ips = []
+
+    # iterate over the list items
+    for item in data:
+    # extract the IP using regular expression
+        result = re.search(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', item)
+    # check if IP is found and add to the list
+        if result:
+            ips.append(result.group(0))
+    return ips
 
 def iplist_to_iptext():
-    iplist = scan_to_iplist()
+    try:
+        iplist = scan_to_iplist()
+    except:
+        iplist = linux_scan_to_iplist()
     with open('./CF_dns_manager/ip.txt', 'w') as f:
             f.write('\n'.join(iplist))
 iplist_to_iptext()
