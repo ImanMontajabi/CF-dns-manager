@@ -2,6 +2,8 @@ import requests
 import json
 import re
 
+
+max_ips = 100
 try:
     with open("./CF_dns_manager/user_id.json", "r") as json_file:
         data = json.load(json_file)
@@ -59,13 +61,20 @@ def ip_list():
         f.close()
         return myip
 # ================= put best 100 ip to bestip.txt =====================
+all_ips = ip_list()
+lenscan = len(all_ips)
+
 def bestip():
+    ipn = 0
     filename = "./CF_dns_manager/best_ip.txt"
-    top100ip = []
-    for i in range(100):
-        top100ip.append(ip_list()[i])
+    topUnder100ip = []
+    while(ipn < lenscan):
+        topUnder100ip.append(all_ips[ipn])
+        ipn += 1
+        if ipn >= max_ips:
+            break
     with open(filename, "w") as f:
-        f.write("\n".join(top100ip))
+        f.write("\n".join(topUnder100ip))
     f.close()
 bestip()
 # ============ create dns records ===============
@@ -85,23 +94,27 @@ headers = {
         "X-Auth-Email": email,
         "X-Auth-Key": api_token
     }
-i_num = 0
+ipn = 0
 print("=====================================")
-for i in range(100):
+while (ipn < lenscan):
     data = {
         "type": "A",
         "name": params_name,
-        "content": f"{ilist[i].strip()}",
+        "content": f"{ilist[ipn].strip()}",
         "ttl": 1,
         "proxied": False
     }
-    i_num += 1
+    ipn += 1
     response = requests.post(url, headers=headers, json=data)
     if (response.status_code == 200):
-        print(f"{i_num}){response.json()['result']['name']}: {response.json()['result']['content']} added")
+        print(f"{ipn}){response.json()['result']['name']}: {response.json()['result']['content']} added")
+        ipn += 1
     else:
-        print(f"{i_num}){ip_name}.{domain}: {ilist[i].strip()}  already exist")
-print(f"Total IPs: {i_num}")
+        print(f"{ipn}){ip_name}.{domain}: {ilist[ipn].strip()}  already exist")
+        ipn += 1
+    if ipn > max_ips:
+        break
+print(f"Total IPs: {ipn}")
 print("=====================================")
 print("github: https://github.com/ImanMontajabi/CF_dns_manager")
 print("twitter: https://twitter.com/imanmontajabi")
